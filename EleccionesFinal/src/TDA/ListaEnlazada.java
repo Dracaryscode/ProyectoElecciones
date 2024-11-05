@@ -47,4 +47,29 @@ public class ListaEnlazada {
         newNodo.setNext(L);
         L = newNodo; 
     }
+    
+    public void eliminar(int valor){
+        if (vacia()) {
+            return;
+        }
+
+        if (L.value() == valor) { // Si el primer nodo es el que buscamos
+            L = L.next();
+            return;
+        }
+
+        Nodo ptr = L;
+        while (ptr.next() != null && ptr.next().value() != valor) {
+            ptr = ptr.next();
+        }
+
+        if (ptr.next() == null) { // Si llegamos al final y no se encontró
+            return;
+        }
+
+        // Si encontramos el nodo, lo saltamos
+        ptr.setNext(ptr.next().next());
+       
+        
+    }
 }

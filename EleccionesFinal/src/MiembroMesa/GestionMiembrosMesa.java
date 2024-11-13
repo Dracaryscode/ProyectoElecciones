@@ -1,5 +1,6 @@
-package Clases;
+package MiembroMesa;
 
+import MiembroMesa.MiembroMesa;
 import TDA.ListaEnlazada;
 
 public class GestionMiembrosMesa {

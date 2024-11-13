@@ -1,4 +1,4 @@
-package Clases;
+package MiembroMesa;
 
 public class MiembroMesa {
     private String apellidos;

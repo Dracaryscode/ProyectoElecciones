@@ -6,12 +6,12 @@ import MiembroMesa.MiembroMesa;
  *
  * @author USUARIO
  */
-    class Nodo {
+    public class NodoMiembroMesa{
         private MiembroMesa miembro; // Almacena un objeto MiembroMesa
-        private Nodo next; // Apunta al siguiente nodo
+        private NodoMiembroMesa next; // Apunta al siguiente nodo
 
     // Constructor para inicializar un Nodo con un objeto MiembroMesa
-    public Nodo(MiembroMesa miembro) {
+    public NodoMiembroMesa(MiembroMesa miembro) {
         this.miembro = miembro;
         this.next = null;
     }
@@ -22,12 +22,12 @@ import MiembroMesa.MiembroMesa;
     }
 
     // Método para obtener el siguiente nodo
-    public Nodo next() {
+    public NodoMiembroMesa next() {
         return next;
     }
 
     // Método para establecer el siguiente nodo
-    public void setNext(Nodo node) {
+    public void setNext(NodoMiembroMesa node) {
         this.next = node;
     }
 }

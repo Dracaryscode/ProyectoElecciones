@@ -1,5 +1,5 @@
 package MiembroMesa;
-
+/*Paso 1*/
 public class MiembroMesa {
     private String apellidos;
     private String nombres;

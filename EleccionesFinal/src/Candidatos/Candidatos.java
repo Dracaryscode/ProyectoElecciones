@@ -1,5 +1,5 @@
 package Candidatos;
-
+// Parte por ANG
 public class Candidatos {
     public String nombre;
     public String apellidos;

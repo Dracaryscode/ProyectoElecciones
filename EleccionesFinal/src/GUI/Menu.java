@@ -12,13 +12,15 @@ import javax.swing.*;
  * @author kevdev
  */
 public class Menu extends javax.swing.JFrame {
-
+    private ActaVotaciones actaVotacionesPanel;
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
         initializeMenu(); 
+        actaVotacionesPanel = new ActaVotaciones(); // Inicializamos el panel aquí
+
     }
 
     /**
@@ -31,7 +33,7 @@ public class Menu extends javax.swing.JFrame {
 
         // Crear barra de menú
         JMenuBar menuBar = new JMenuBar();
-
+        
         // Crear menús
         JMenu electionMenu = new JMenu("Gestión de Elecciones");
         JMenu candidateMenu = new JMenu("Gestión de Candidatos");
@@ -49,6 +51,7 @@ public class Menu extends javax.swing.JFrame {
         JMenuItem addCandidate = new JMenuItem("Agregar Candidato");
         JMenuItem modifyCandidate = new JMenuItem("Modificar Candidato");
         JMenuItem deleteCandidate = new JMenuItem("Eliminar Candidato");
+        JMenuItem manageCandidates = new JMenuItem("Gestionar Candidatos");
 
         JMenuItem registerVote = new JMenuItem("Registrar Voto");
         JMenuItem viewResults = new JMenuItem("Ver Resultados");
@@ -64,7 +67,7 @@ public class Menu extends javax.swing.JFrame {
         electionMenu.add(createElection);
         electionMenu.add(modifyElection);
         electionMenu.add(deleteElection);
-
+        
         candidateMenu.add(addCandidate);
         candidateMenu.add(modifyCandidate);
         candidateMenu.add(deleteCandidate);
@@ -112,6 +115,13 @@ public class Menu extends javax.swing.JFrame {
         setTitle("Sistema de Votación");
         setSize(600, 400);  // Tamaño de la ventana
         setLocationRelativeTo(null); 
+        
+        manageTable.addActionListener(e -> switchTActaVotaciones()); // New: Acción para el botón "Administrar Mesas"
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema de Votación");
+        setSize(600, 400);  // Tamaño de la ventana
+        setLocationRelativeTo(null);
 
         // Configuración de layout (ajustar el tamaño de la ventana si es necesario)
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -145,7 +155,7 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //
     /**
      * @param args the command line arguments
      */
@@ -189,6 +199,12 @@ public class Menu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new Menu().setVisible(true);
         });
+    }
+
+    private void switchTActaVotaciones() {
+        setContentPane(actaVotacionesPanel); // New: Cambia el JPanel al ActaVotaciones
+        revalidate(); // New: Revalida el JFrame para actualizar la vista
+        repaint(); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

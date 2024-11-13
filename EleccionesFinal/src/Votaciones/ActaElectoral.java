@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Votaciones;
 
 /**
@@ -23,12 +20,6 @@ public class ActaElectoral {
         this.totalVotantesRegistrados = totalVotantesRegistrados;
         this.totalVotantesParticiparon = totalVotantesParticiparon;
         this.votosPorCandidato = new HashMap<>();
-        // Inicializa con 0 votos para cada candidato
-        this.votosPorCandidato.put("Candidato 1", 0);
-        this.votosPorCandidato.put("Candidato 2", 0);
-        this.votosPorCandidato.put("Candidato 3", 0);
-        this.votosPorCandidato.put("Candidato 4", 0);
-        this.votosPorCandidato.put("Candidato 5", 0);
     }
 
     public void registrarVoto(String candidato) {
@@ -41,10 +32,17 @@ public class ActaElectoral {
         return votosPorCandidato;
     }
 
-    // Métodos getter y setter
-    public String getIdMesa() { return idMesa; }
-    public String getFechaHora() { return fechaHora; }
-    public int getTotalVotantesRegistrados() { return totalVotantesRegistrados; }
-    public int getTotalVotantesParticiparon() { return totalVotantesParticiparon; }
+    public String getIdMesa() { 
+        return idMesa; 
+    }
+    public String getFechaHora() { 
+        return fechaHora; 
+    }
+        public int getTotalVotantesRegistrados() { 
+            return totalVotantesRegistrados; 
+        }
+    public int getTotalVotantesParticiparon() { 
+        return totalVotantesParticiparon; 
+    }
 }
 

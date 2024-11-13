@@ -7,7 +7,8 @@ package Votaciones;
 /**
  *
  * @author Leonel
- */
+*/
+
 public class Nodo {
     public ActaElectoral valor;
     public Nodo next;
@@ -16,16 +17,17 @@ public class Nodo {
         this.valor = valor;
         this.next = null;        
     }
-    
+
     public ActaElectoral value() {
         return valor;
     }
-    
+
     public Nodo next() {
         return next;
     }
-    
+
     public void setNext(Nodo node) {
         this.next = node;
     }
 }
+

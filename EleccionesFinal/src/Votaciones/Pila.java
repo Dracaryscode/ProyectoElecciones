@@ -8,6 +8,7 @@ package Votaciones;
  *
  * @author Leonel
  */
+
 public class Pila {
     private Nodo top;
 
@@ -15,33 +16,35 @@ public class Pila {
         this.top = null;
     }
 
-    public void registrarActa(ActaElectoral acta) {
-        Nodo nuevoNodo = new Nodo(acta);
-        nuevoNodo.setNext(top);
-        top = nuevoNodo;
+    public Nodo getTop() {
+        return top;
     }
 
-    public ActaElectoral obtenerUltimaActa() {
+    public void push(ActaElectoral acta) {
+        Nodo newNodo = new Nodo(acta);
+        newNodo.setNext(top);
+        top = newNodo;
+    }
+
+    public ActaElectoral pop() {
         if (top != null) {
             ActaElectoral acta = top.value();
             top = top.next();
             return acta;
         } else {
-            System.out.println("No hay actas en la pila.");
+            System.out.println("La pila está vacía.");
             return null;
         }
     }
 
-    public void mostrarActas() {
+    public void mostrarElementos() {
         if (top == null) {
-            System.out.println("La pila de actas está vacía.");
+            System.out.println("La pila está vacía.");
         } else {
-            System.out.println("Actas registradas:");
+            System.out.println("Los elementos de la pila son:");
             Nodo ptr = top;
             while (ptr != null) {
-                System.out.println("Acta de la mesa: " + ptr.value().getIdMesa());
-                System.out.println("Fecha y Hora: " + ptr.value().getFechaHora());
-                System.out.println("Votos por Candidato: " + ptr.value().getVotosPorCandidato());
+                System.out.println(ptr.value());
                 ptr = ptr.next();
             }
         }

@@ -1,5 +1,5 @@
 package TDA;
-
+// Parte hecha entre todos los miembros del equipo
 import TDA.NodoCola;
 import Candidatos.Candidatos;
 

@@ -1,5 +1,5 @@
 package Candidatos;
-
+// Parte por Angela Chavez
 import java.util.Scanner;
 import TDA.Cola;
 import TDA.NodoCola;

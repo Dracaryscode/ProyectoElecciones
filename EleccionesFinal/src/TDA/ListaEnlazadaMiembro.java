@@ -1,4 +1,5 @@
 package TDA;
+// Parte hecha entre todos los miembros del equipo
 
 public class ListaEnlazadaMiembro<T> {
     public NodoMiembro<T> L; // nodo cabecera para acceder a los elementos de la lista

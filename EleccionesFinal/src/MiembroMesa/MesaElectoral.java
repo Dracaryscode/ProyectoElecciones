@@ -1,5 +1,7 @@
 package MiembroMesa;
 /*Paso 2*/
+/*Parte hecha en conjunto entre Jorge y Victor*/
+
 import TDA.*;
 public class MesaElectoral {
     private String ubicacion;

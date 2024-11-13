@@ -1,5 +1,6 @@
 package MiembroMesa;
 /*Paso 3*/
+/*Parte hecha en conjunto entre Jorge y Victor*/
 import TDA.*;
 public class GestionMiembroMesa {
     private ListaEnlazadaMiembro<MesaElectoral> mesas; // Lista de mesas electorales

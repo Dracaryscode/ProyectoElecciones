@@ -1,5 +1,7 @@
 package MiembroMesa;
 /*Paso 1*/
+/*Parte hecha en conjunto entre Jorge y Victor*/
+
 public class MiembroMesa {
     private String apellidos;
     private String nombres;
